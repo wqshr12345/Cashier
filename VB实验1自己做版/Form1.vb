@@ -45,7 +45,7 @@
         NumberTextBox.Text = "1"
         PriceTextBox.Text = nowcommodity.Price
         If nowcommodity.First = True And (nowcommodity.CountNumber >= 0) Then
-            CountTextBox.Text = "30%"
+            CountTextBox.Text = nowcommodity.Count
         Else
             CountTextBox.Text = "0%"
         End If
@@ -63,15 +63,6 @@
         TextBox7.Text = Convert.ToString(sum)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If TextBox8.Text = "" Then
-            MsgBox("请输入实付款后再进行计算！")
-        ElseIf Convert.ToInt32(TextBox7.Text) > Convert.ToInt32(TextBox8.Text) Then
-            TextBox9.Text = "付款不足"
-        Else
-            TextBox9.Text = Convert.ToString(Convert.ToInt32(TextBox8.Text) - Convert.ToInt32(TextBox7.Text))
-        End If
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If TextBox9.Text = "付款不足" Then
@@ -102,5 +93,19 @@
     Private Sub 修改商品种类名字ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 修改商品种类名字ToolStripMenuItem.Click
         Dim frm3 As New Form3()
         frm3.Show()
+    End Sub
+
+    Private Sub TextBox8_TextChanged(sender As Object, e As EventArgs) Handles TextBox8.TextChanged
+        If TextBox8.Text = "" Then
+            MsgBox("请输入实付款后再进行计算！")
+        ElseIf Convert.ToInt32(TextBox7.Text) > Convert.ToInt32(TextBox8.Text) Then
+            TextBox9.Text = "付款不足"
+        Else
+            TextBox9.Text = Convert.ToString(Convert.ToInt32(TextBox8.Text) - Convert.ToInt32(TextBox7.Text))
+        End If
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+
     End Sub
 End Class

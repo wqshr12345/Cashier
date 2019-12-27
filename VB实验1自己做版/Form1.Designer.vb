@@ -50,7 +50,6 @@ Partial Class Form1
         Me.单价 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.折扣 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.总额 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -219,7 +218,7 @@ Partial Class Form1
         '
         Me.Button1.Location = New System.Drawing.Point(547, 408)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(108, 23)
+        Me.Button1.Size = New System.Drawing.Size(109, 33)
         Me.Button1.TabIndex = 19
         Me.Button1.Text = "收费"
         Me.Button1.UseVisualStyleBackColor = True
@@ -279,21 +278,11 @@ Partial Class Form1
         Me.总额.Name = "总额"
         Me.总额.ReadOnly = True
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(372, 460)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 25
-        Me.Button2.Text = "计算"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(794, 507)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button1)
@@ -350,7 +339,6 @@ Partial Class Form1
     Friend WithEvents 单价 As DataGridViewTextBoxColumn
     Friend WithEvents 折扣 As DataGridViewTextBoxColumn
     Friend WithEvents 总额 As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
     Friend WithEvents 编辑ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents 请输入商品名字ToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents 修改商品种类名字ToolStripMenuItem As ToolStripMenuItem
